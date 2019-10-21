@@ -7,6 +7,6 @@ import cucumber.api.junit.Cucumber;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features=".", tags=("@login"))
+@CucumberOptions(features=".", tags=("@login"),plugin={"pretty","html:target/Destinations"})
 public class RunTest {
 }
