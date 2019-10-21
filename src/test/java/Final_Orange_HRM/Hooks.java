@@ -40,10 +40,10 @@ public class Hooks extends BasePage{
             System.out.println(screenshotName);
             try{
                 File sourcePath=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-                File destinationPath= new File(System.getProperty("user.dir")+"/target/Destinations" + screenshotName);
+                File destinationPath= new File(System.getProperty("user.dir")+"/target/Destinations/Screenshots" + screenshotName);
                 copyFile(sourcePath,destinationPath);
                 scenario.write("!!!!!!!!!!........Scenario Failed......!!!!!!!!!!!! Please see attached screenshots for the error/issue");
-                scenario.embed(((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES),"image//png");
+                scenario.embed(((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES),"image/png");
             }
             catch(IOException e){
 
