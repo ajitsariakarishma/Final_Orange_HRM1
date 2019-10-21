@@ -1,9 +1,9 @@
-
+@login
 Feature: User should be able to login successfully
 
   Background:
     Given is on homepage
-  @login
+
   Scenario:User should be able to login successfully with valid credentials
     When User enters valid username and  valid password
     And Clicks on login button
