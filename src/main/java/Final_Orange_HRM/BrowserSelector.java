@@ -97,7 +97,7 @@ public class BrowserSelector extends Utils{
             }
         } else {
             //Storing the value of browser from config file in a String Variable
-            String browser = props.getProperty("browser");
+            String browser = System.getProperty("browser");
             if (browser.equalsIgnoreCase("chrome")) {
 
                 //setting system properties to launch chrome browser
