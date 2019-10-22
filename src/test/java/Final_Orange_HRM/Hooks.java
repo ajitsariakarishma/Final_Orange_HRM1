@@ -43,7 +43,8 @@ public class Hooks extends BasePage{
                 File destinationPath= new File(System.getProperty("user.dir")+"/target/Destinations/Screenshots" + screenshotName);
                 copyFile(sourcePath,destinationPath);
                 scenario.write("!!!!!!!!!!........Scenario Failed......!!!!!!!!!!!! Please see attached screenshots for the error/issue");
-                scenario.embed(((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES),"image/png");
+                final byte []screenshot=((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
+                scenario.embed(screenshot,"image/png");
             }
             catch(IOException e){
 
